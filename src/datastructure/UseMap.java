@@ -1,5 +1,10 @@
 package datastructure;
 
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+
 public class UseMap {
 
 	public static void main(String[] args) {
@@ -11,6 +16,36 @@ public class UseMap {
 		 * Use any databases[MongoDB, Oracle, MySql] to store data and retrieve data.
 		 */
 
-	}
+		List<String> name = new ArrayList<>();
 
+		name.add("kiwi");
+		name.add("Orange");
+		name.add("Cherry");
+		name.add("Mango");
+		name.add("Grape");
+		name.add("Watermilon");
+
+		List<String> ls = new ArrayList<>();
+
+		ls.add("USA");
+		ls.add("Nepal");
+		ls.add("BANGLADESH");
+		ls.add("INDIA");
+		ls.add("JAPAN");
+		ls.add("KOREA");
+
+
+		LinkedHashMap<String, List<String>> fruthsAndCountry = new LinkedHashMap<>();
+		fruthsAndCountry.put("This is fruits name: ",  name);
+		fruthsAndCountry.put("This is coynrtry name: ",ls);
+
+		for (Map.Entry entry : fruthsAndCountry.entrySet()){
+			System.out.println(entry.getKey()+ " "+ entry.getValue());
+		}
+	}
 }
+
+
+
+
+
