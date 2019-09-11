@@ -23,4 +23,7 @@ public interface Employee {
 	//employee benefit
 	public void benefitLayout();
 
+	//employee vacation
+	public void noPaidVacation();
+
 }

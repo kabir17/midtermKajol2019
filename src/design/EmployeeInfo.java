@@ -2,7 +2,7 @@ package design;
 
 import java.util.Scanner;
 
-public class EmployeeInfo {
+public class EmployeeInfo extends Use_Abstract_Employee implements Employee{
 	
  /*This class can be implemented from Employee interface then add additional methods in EmployeeInfo class.
  * Also, Employee interface can be implemented into an abstract class.So create an Abstract class
@@ -20,7 +20,47 @@ public class EmployeeInfo {
 	/*
 	 * declare few static and final fields and some non-static fields
 	 */
+
+
 	static String companyName;
+
+
+	private int employeeId;
+	private String employeeName;
+	private String department;
+	private double salary;
+
+	public int getEmployeeId() {
+		return employeeId;
+	}
+
+	public void setEmployeeId(int employeeId) {
+		this.employeeId = employeeId;
+	}
+
+	public String getEmployeeName() {
+		return employeeName;
+	}
+
+	public void setEmployeeName(String employeeName) {
+		this.employeeName = employeeName;
+	}
+
+	public String getDepartment() {
+		return department;
+	}
+
+	public void setDepartment(String department) {
+		this.department = department;
+	}
+
+	public double getSalary() {
+		return salary;
+	}
+
+	public void setSalary(double salary) {
+		this.salary = salary;
+	}
 	
 	/*
 	 * You must implement the logic for below 2 methods and 
@@ -75,6 +115,42 @@ public class EmployeeInfo {
 
 		return total;
 	}
+
+	@Override
+	public int employeeId() {
+		return 0;
+	}
+
+	@Override
+	public String employeeName() {
+		return null;
+	}
+
+	@Override
+	public void assignDepartment() {
+
+	}
+
+	@Override
+	public int calculateSalary() {
+		return 0;
+	}
+
+	@Override
+	public void benefitLayout() {
+
+	}
+
+	@Override
+	public void noPaidVacation() {
+
+	}
+
+	@Override
+	public void employeeHis() {
+
+	}
+
 	private static class DateConversion {
 
 		public DateConversion(Months months){}

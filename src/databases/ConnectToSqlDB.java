@@ -15,6 +15,14 @@ import java.util.Properties;
  * Created by mrahman on 04/02/18.
  */
 
+/**
+ * For SQL8
+ *  project structure-> modules-> add jars copy & paste in your midtermJuly2019/lib folder mySQLconnector 8.0 Jar
+ *  or add jars to lib
+ *  remove the old version
+ *  change the secret.properties
+ *
+ */
 public class ConnectToSqlDB {
 
     public static Connection connect = null;
@@ -91,7 +99,7 @@ public class ConnectToSqlDB {
             ps.executeUpdate();
             ps = connect.prepareStatement("CREATE TABLE `"+tableName+"` (`ID` int(11) NOT NULL AUTO_INCREMENT,`SortingNumbers` bigint(20) DEFAULT NULL,  PRIMARY KEY (`ID`) );");
             ps.executeUpdate();
-            for(int n=0; n<ArrayData.length; n++){
+            for(int n = 0; n<ArrayData.length; n++){
                 ps = connect.prepareStatement("INSERT INTO "+tableName+" ( "+columnName+" ) VALUES(?)");
                 ps.setInt(1,ArrayData[n]);
                 ps.executeUpdate();
@@ -110,6 +118,7 @@ public class ConnectToSqlDB {
     {
         try {
             connectToSqlDatabase();
+            ps = connect.prepareStatement("DROP TABLE IF EXISTS `"+tableName+"`;");  // by me
             ps = connect.prepareStatement("INSERT INTO "+tableName+" ( "+columnName+" ) VALUES(?)");
             ps.setString(1,ArrayData);
             ps.executeUpdate();
@@ -162,14 +171,37 @@ public class ConnectToSqlDB {
     }
 
 
+    // for lowest number insertion
+    public void insertLowestNumberFromArrayListToSqlTable(int [] ArrayData, String tableName, String columnName)
+    {
+        try {
+            connectToSqlDatabase();
+            ps = connect.prepareStatement("DROP TABLE IF EXISTS `"+tableName+"`;");
+            ps.executeUpdate();
+            ps = connect.prepareStatement("CREATE TABLE `"+tableName+"` (`ID` int(11) NOT NULL AUTO_INCREMENT,`LowestNumbers` bigint(20) DEFAULT NULL,  PRIMARY KEY (`ID`) );");
+            ps.executeUpdate();
+            for(int n=0; n<ArrayData.length; n++) {
+                ps = connect.prepareStatement("INSERT INTO " + tableName + " ( " + columnName + " ) VALUES(?)");
+                ps.setInt(1, ArrayData[n]);
+                ps.executeUpdate();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
     public void insertProfileToSqlTable(String tableName, String columnName1, String columnName2)
     {
         try {
             connectToSqlDatabase();
-                ps = connect.prepareStatement("INSERT INTO "+tableName+" ( " + columnName1 + "," + columnName2 + " ) VALUES(?,?)");
-                ps.setString(1,"Ankita Sing");
-                ps.setInt(2,3590);
-                ps.executeUpdate();
+            ps = connect.prepareStatement("INSERT INTO "+tableName+" ( " + columnName1 + "," + columnName2 + " ) VALUES(?,?)");
+            ps.setString(1,"Ankita Sing");
+            ps.setInt(2,3590);
+            ps.executeUpdate();
 
 
         } catch (IOException e) {
