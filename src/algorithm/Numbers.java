@@ -27,11 +27,12 @@ public class Numbers {
 
 	public static void main(String[] args) throws Exception {
 
-		int [] num = new int[1000];
+		int [] num = new int[500];
 
 		Random rand = new Random();
 		for(int i=0; i<num.length; i++){
-			num[i] = rand.nextInt(10000);
+			num[i] = rand.nextInt(500);
+			System.out.println(num[i]);
 		}
 		ConnectToSqlDB connectToSqlDB = new ConnectToSqlDB();
 		//Selection Sort
