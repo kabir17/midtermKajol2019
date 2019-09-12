@@ -23,10 +23,10 @@ public class ProcessStudentInfo {
 		 *
 		 * Do any necessary steps that require for below successful output.
 		 * ......................................................
-		 * Student (id= 1) "Ibrahim" "Khan"        		Grade= B
-		 * Student (id= 2) "Asif" "Roni"          		Grade= A
-		 * Student (id= 3) "Gumani" "Hose"              Grade= A
-		 * Student (id= 4) "Sukanto" "Shaha"            Grade= B
+		 * Student (id= 1) "Kajol" "kabir"        		Grade= B
+		 * Student (id= 2) "Sayeed" "ahmed"          		Grade= A
+		 * Student (id= 3) "Nure "alam"              Grade= A
+		 * Student (id= 4) "Rifat" "khan"            Grade= B
 		 * Student (id= 5) "MD" "Hossain"               Grade= C
 		 * ......................................................
 		 * 

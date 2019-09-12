@@ -2,20 +2,24 @@ Please answer the below core-java Questions:
 
 What is programing language?
 A.
-
-
-
+A programming language is a formal language, which comprises a set of instructions that produce
+various kinds of output.
 
 What jdk contains or composed of and define each components?
 A.
+JRE contains or composed of and defining each components :
 
-
-
-
+-The Runtime Interpreter.
+-The Compiler.
+-The Applet Viewer.
+-The Debugger.
+-The Class File Disassembler.
+-The Header and Stub File Generator.
+-The Documentation Generator.
+-Applet Demos.
 
 What is IDE?
 A.
-
 Integrated development environment.
 
 What are the IDEs available in the market to support java?
