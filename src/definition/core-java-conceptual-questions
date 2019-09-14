@@ -2,12 +2,12 @@ Please answer the below core-java Questions:
 
 What is programing language?
 A.
-A programming language is a formal language, which comprises a set of instructions that produce
-various kinds of output.
+-A programming language is a formal language, which comprises a set of instructions that produce various
+kinds of output. Programming languages are used in computer programming to implement algorithms.
 
 What jdk contains or composed of and define each components?
 A.
-JRE contains or composed of and defining each components :
+-JRE contains or composed of and defining each components :
 
 -The Runtime Interpreter.
 -The Compiler.
@@ -20,22 +20,83 @@ JRE contains or composed of and defining each components :
 
 What is IDE?
 A.
-Integrated development environment.
+-Integrated development environment.
 
 What are the IDEs available in the market to support java?
 A.
-
-
+-IntelliJ IDEA
+=Eclipse
+-NetBeans
+-Xcode
+-MyEclipse
+-BlueJ
+-Oracle JDeveloper
+-Rational Application Developer for WebSphere Software
 
 Explain the entire java life cycle.
+-Java life cycle steps write by hello java:
+-----------------------------------------
+	-Java Life Cycle : Source code-->Java Compiler(Javac)-->Byte Codes(classname.class)-->JVM-->Os.
+
+
+	-1. Source Code : We write some code in a note pad that becomes Source code.see below.
+
+	    public class Hello{
+	      public static void main(String [] args){
+		  System.out.println("Hello Java!");
+	      }
+	    }
+
+	 2. Java compiler: write javac(compiler) Hello.java (file name)then enter.
+	    We call the compiler to compile(run)this source code to produce the bite code Which creates
+	    (dot).class file.(So Java c is the compiler.When we download the JDK it has the compiler.
+	    Thats why we need JDK.)
+
+	 3. Byte Codes : write dir-enter(if we want to see the change).
+	    Byte code need load to JVM for output.(keep in mind file name was Hello.java after compile it
+	    becomes byte code(byte code is a machine language human does not understand)and file Hello.java
+	    becomes Hello.class file.
+
+	 4. JVM(java virtual machine):
+        JVM is a loader so simply call the class which is Hello so write java Hello.
+
+	 5. Os(operating System) : When we hit enter Jit operator will show the result or output(Hello Java).
+	    (jit=just in time operator)
+
 what is class?
+-Class is blue print of an object.
+
 What is object?
+-Object is an instance of a class.
+
 What is the entry point of an application?
+-Application entry points are used to control users' access to different versions of an application
+that is deployed on a platform. They are also used to create an application context to monitor the
+resource usage for applications and to identify an application being run.
+
 Why main is static?
+-Java program's main method has to be declared static because keyword static allows main to be called
+without creating an object of the class in which the main method is defined.
+
 Which class is the superclass of all classes?
+-Object is a super class of any class by default. The root class of the Java class hierarchy.
+
 What is difference between path and classpath variables?
+-.Path is an environment variable which is used by the operating system to find the executables.
+  Classpath is an environment variable which is used by the Java compiler to find the path, of classes.
+  ie in J2EE we give the path of jar files.
+
 What is the difference between an Interface and Abstract class?
+-.Interface : Interface is a roadmap for concrete class.Before create class making design process.
+ 	         We cannot do implement method or create an object(instantiate) from interface.Only we can
+ 	         declare here.In interface all declare method are default abstract method(It remains in hide).
+
+ 		 But we must have to implement the whole interface class with method(not the only interface method)
+ 		 into the concrete class coz of interface roadmap and that roadmap(all interface method)must will be
+ 		 followed by the concrete class.This is all about interface.
+
 Can you make an Object from an Interface and Abstract class ? if not how do you use it ?
+-No we cannot make an object form an interface and abstract class.
 what is Access Specifier?
 What is OOP ? Define each feature of java OOP.
 What is Java Package and which package is imported by default?
